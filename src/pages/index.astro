@@ -1,7 +1,59 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "James Wu";
 ---
 
-<BaseLayout pageTitle="James Wu">
-  <p >hello world</p>
+<BaseLayout pageTitle={pageTitle}>
+  <main class="font-sans">
+    <h2 class="text-4xl">Projects</h2>
+    <div class="container flex flex-col items-center justify-center gap-12 px-4 py-4">
+      <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
+        <li>
+          <a class="flex max-w-lg flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-blue-200" href="https://tshort.wujames.ca">
+            <h3 class="text-2xl font-bold">Short URL Generator</h3>
+            <div class="text-lg">
+              Full Stack web applicaiton for generating a shortened URL and redirecting to original URL.
+            </div>
+            <div class="text-m">
+              React | Typescript | Next.js | tRPC | Prisma | MongoDB
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="flex max-w-lg flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-blue-200" href="https://polly.wujames.ca">
+            <h3 class="text-2xl font-bold">Polly</h3>
+            <div class="text-lg">
+              Full Stack web application for conducting poll for users who have been authenticated and authorized.
+            </div>
+            <div class="text-m">
+              React | Typescript | Next.js | tRPC | Prisma | PlanetScale
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="flex max-w-lg flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-blue-200" href="">
+            <h3 class="text-2xl font-bold">Pokemon Team Builder</h3>
+            <div class="text-lg">
+              Backend Web application to construct teams for Pokemon games.
+            </div>
+            <div class="text-m">
+              Go | Gin | MongoDB
+            </div>
+          </a>
+        </li>
+        <li>
+          <a class="flex max-w-lg flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-blue-200" href="https://ethical-makeup-4.netlify.app/">
+            <h3 class="text-2xl font-bold">Ethical Makeup</h3>
+            <div class="text-lg">
+              eCommerce web application for cheap vegan makeup products.  
+            </div>
+            <div class="text-m">
+              React | Firebase
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </main>
 </BaseLayout>
