@@ -1,0 +1,43 @@
+---
+import ListItem from "./ListItem.astro";
+
+const data = [
+  {
+    name: "Short URL Generator",
+    github: "https://github.com/jamesswu/tshort",
+    live: "https://tshort.wujames.ca",
+    description: "Full Stack web applicaiton for generating a shortened URL and redirecting to original URL.",
+    tech: ["React","TypeScript", "Next.js","tRPC","Prisma","MongoDB"],
+  },
+  {
+    name: "Polly",
+    github: "https://github.com/jamesswu/polly",
+    live: "https://polly.wujames.ca",
+    description: "Full Stack web application for conducting poll for users who have been authenticated and authorized.",
+    tech: ["React","TypeScript", "Next.js","tRPC","Prisma","PlanetScale"],
+  },
+  {
+    name: "Pokemon Team Builder",
+    github: "",
+    live: "",
+    description: "Web application to construct teams for Pokemon games.",
+    tech: ["Go","Fiber","MongoDB"],
+  },
+  {
+    name: "Ethical Makeup",
+    github: "https://github.com/group-project-four/ethicalMakeup",
+    live: "https://ethical-makeup-4.netlify.app/",
+    description: "eCommerce web application for cheap vegan makeup products.",
+    tech: ["React","Firebase"],
+  },
+];
+
+
+
+---
+
+<ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
+  {data.map( (item) => {
+    return <ListItem name={item.name} github={item.github} live={item.live} description={item.description} tech={item.tech} />
+  })}
+</ul>

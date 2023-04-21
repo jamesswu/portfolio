@@ -1,0 +1,22 @@
+---
+const {name, github, live, description, tech} = Astro.props;
+
+const techString = tech.join(" | ");
+---
+
+<li class="flex max-w-lg flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-blue-400">
+  <div>
+    <h3 class="text-2xl font-bold">{name}</h3>
+    <span class="flex text-xs">
+      <a href={github}>Github</a>
+      <p class="mx-1">|</p>
+      <a href={live}>Live</a>
+    </span>
+  </div>
+  <div class="text-lg">
+    {description}
+  </div>
+  <div class="text-xs">
+    {techString}
+  </div>
+</li>
