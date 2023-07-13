@@ -7,8 +7,17 @@ const pageTitle = "James Wu";
 <BaseLayout pageTitle={pageTitle}>
   <main class="max-w-max flex flex-col my-0 mx-auto font-sans mt-10">
     <div class="border-4 border-grey-200 bg-white rounded-lg">
-      <div class="text-grey-700 bg-grey-100 text-4xl h-16 rounded-sm pl-2 flex justify-start items-center" >
-        <h2 >Projects</h2>
+      <style>
+        .primary {
+          fill: #BCCCDC;
+        }
+        .secondary {
+          fill: #003E6B;
+        }
+      </style>
+      <div class="text-grey-700 bg-grey-100 text-4xl h-16 rounded-sm pl-4 flex justify-start items-center" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-folder"><path class="secondary" d="M4 4h7l2 2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><rect width="20" height="12" x="2" y="8" class="primary" rx="2"/></svg>
+        <h2 class="font-bold">Projects</h2>
       </div>
       <div class="container flex flex-col items-center justify-center gap-12 px-4 p-4">
         <ProjectList />
