@@ -5,10 +5,14 @@ const pageTitle = "James Wu";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <main class="font-sans">
-    <h2 class="text-4xl">Projects</h2>
-    <div class="container flex flex-col items-center justify-center gap-12 px-4 py-4">
-      <ProjectList />
+  <main class="max-w-max flex flex-col my-0 mx-auto font-sans mt-14">
+    <div class="border-4 border-grey-200 bg-white rounded-lg">
+      <div class="text-grey-700 bg-grey-100 text-4xl h-16 rounded-sm pl-2 flex justify-start items-center" >
+        <h2 >Projects</h2>
+      </div>
+      <div class="container flex flex-col items-center justify-center gap-12 px-4 p-4">
+        <ProjectList />
+      </div>
     </div>
   </main>
 </BaseLayout>
