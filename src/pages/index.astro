@@ -1,12 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectList from "../components/ProjectList.astro";
+import About from "../components/about.astro";
 import "../styles/utils.css"
 const pageTitle = "James Wu";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <main class="max-w-max flex flex-col my-0 mx-auto font-sans mt-10">
+    <div class="border-4 border-grey-200 bg-white rounded-lg mb-8">
+      <div class="text-grey-700 bg-grey-100 text-4xl h-16 rounded-sm pl-4 flex justify-start items-center" >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-user"><path class="primary" d="M12 12a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/><path class="secondary" d="M21 20v-1a5 5 0 0 0-5-5H8a5 5 0 0 0-5 5v1c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2z"/></svg>
+        <h2 class="font-bold">About Me</h2>
+      </div>
+      <div class="container flex flex-col gap-12 px-4 p-4">
+        <About />
+      </div>
+    </div>
     <div class="border-4 border-grey-200 bg-white rounded-lg">
       <div class="text-grey-700 bg-grey-100 text-4xl h-16 rounded-sm pl-4 flex justify-start items-center" >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-8 mr-4 icon-folder"><path class="secondary" d="M4 4h7l2 2h7a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.1.9-2 2-2z"/><rect width="20" height="12" x="2" y="8" class="primary" rx="2"/></svg>
